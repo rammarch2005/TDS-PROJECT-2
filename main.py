@@ -56,7 +56,5 @@ async def solve(request: Request, background_tasks: BackgroundTasks):
 
     return JSONResponse(status_code=200, content={"status": "ok"})
 
-
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 7860))  # 7860 for local tests, Railway overrides PORT
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    uvicorn.run(app, host="0.0.0.0", port=7860)
